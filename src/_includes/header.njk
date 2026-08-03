@@ -1,0 +1,26 @@
+<header id="root-header" class="">
+  <div class="grid">
+    <div id="root-title" class="site-title"><a class="site-link" href="/">Dungeons &amp; Dragons</a></div>
+
+    <button class="hamburger-menu" data-opens="main-navigation">
+      <div class="hamburger-line" rol="image"></div>
+      <div class="hamburger-line" rol="image"></div>
+      <div class="hamburger-line" rol="image"></div>
+    </button>
+  </div>
+
+  <nav class="tray right" aria-label="Main Site Navigation" data-is="main-navigation">
+    <menu>
+    {% set campaigns = collections.campaigns or [] %}
+    <li><a class="site-link" href="/about/">About</a></li>
+    <li><a  href="/campaigns/">Campaigns</a>
+    <menu>
+    {% for campaign in campaigns %}
+      <li><a href="{{ campaign.url }}">{{ campaign.data.title }}</a></li>
+    {% endfor %}
+    </menu>
+    </li>
+    <li><a  href="/house-rules/">House Rules</a></li>
+    </menu>
+  </nav>
+</header>

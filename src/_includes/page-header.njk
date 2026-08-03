@@ -1,0 +1,19 @@
+<header>
+  <h1>{{ title }}</h1>
+  {% if date or fantasyDate %}
+  <div class="dateline">
+    {% if date %}
+      <time datetime="{{ date }}">
+        <span class="dateline-month">{{ date }}</span>
+        <span class="dateline-day">{{ date }}</span>
+      </time>
+    {% endif %}
+    {% if fantasyDate %}
+      <div class="dateline-fantasy">{{ fantasyDate }}</div>
+    {% endif %}
+    {% if version %}
+      v. {{ version }}
+    {% endif %}
+  </div>
+  {% endif %}
+</header>

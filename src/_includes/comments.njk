@@ -1,0 +1,19 @@
+{% if comments[page.url].length  %}
+  <aside class="wrapper comments">
+    <h2 class="comments-title h-first">Comments</h2>
+    {% for comment in comments[page.url] %}
+      <div class="grid comments-comment">
+        <div class="comments-comment-avatar">
+          <img src="{{ comment.avatar }}" width="64" height="64" alt="" />
+        </div>
+        <div class="comments-comment-author">
+          <h3 class="h4">{{comment.name}}</h3>
+          <div class="small">commented on <time datetime="{{ comment.created_at }}">{{ comment.created_at | readableDate}}</time></div>
+        </div>
+        <div  class="comments-comment-body">
+          {{ comment.comment | safe }}
+        </div>
+      </div>
+    {% endfor %}
+  </aside>
+{% endif %}

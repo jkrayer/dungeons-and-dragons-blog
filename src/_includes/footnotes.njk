@@ -1,0 +1,8 @@
+          {% if post.data.footnotes.length > 0 %}
+            <h1 class="footnotes-header">Foot Notes</h1>
+            <ol class="footnotes">
+            {% for footnote in post.data.footnotes %}
+              <li><span id="footnote-{{loop.index}}"></span>{{footnote  | safe}}</li>
+            {% endfor %}
+            </ol>
+          {% endif %}

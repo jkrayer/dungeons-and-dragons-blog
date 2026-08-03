@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  {% include "head.njk" %}
+  <body>
+    <main id="global-content">
+      {% include "header.njk" %}
+        <article>
+          <header>
+            <hgroup>
+              <div>
+                Proposals
+              </div>
+                <h1>{{ title }}</h1>
+            </hgroup>
+            <time datetime="{{ date }}">
+              <span class="dateline-day">{{ date.toLocaleDateString() }}</span>
+            </time>
+          </header>
+
+          {{ content | safe }}
+
+          <footer>
+            <p class="byline">by {{ author }}</p>
+
+            {% if footnotes.length > 0 %}
+              <h1 class="footnotes-header">Foot Notes</h1>
+              <ol class="footnotes">
+              {% for footnote in footnotes %}
+                <li><span id="footnote-{{loop.index}}"></span>{{footnote  | safe}}</li>
+              {% endfor %}
+              </ol>
+            {% endif %}
+          </footer>
+
+          <aside>
+            <p>Tagged:
+              {% for tag in tags %}
+                {% if tag !== 'posts' %}
+                  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+                  
+                    <a href="{{ tagUrl | url }}" class="tag-list-link">{{ tag }}</a>
+                  
+                {% endif %}
+              {% endfor %}
+            </p>
+          </aside>
+        </article>
+        {% include "footer.njk" %}
+    </main>
+  </body>
+</html>

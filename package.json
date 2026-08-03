@@ -1,0 +1,17 @@
+{
+  "name": "dungeons-and-dragons",
+  "version": "1.0.0",
+  "description": "Dungeons and Dragons blog and home for campaigns",
+  "license": "ISC",
+  "author": "James Krayer <jameskrayer@yahoo.com>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "develop": "npx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

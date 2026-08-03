@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  {% include "head.njk" %}
+  <body>
+    <main>
+      {% include "header.njk" %}
+
+    <article id="page-wrapper">
+      {% include "page-header.njk" %}
+
+      {{ content | safe }}
+    </article>
+
+      {% include "footer.njk" %}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  {% include "head.njk" %}
+  <body>
+    <main id="global-content">
+      {% include "header.njk" %}
+
+    <article class="campaign-article">
+      <header>
+        <hgroup>
+          <div>{{ pre }}</div>
+          <h1>{{ title }}</h1>
+        </hgroup>
+        <div class="dateline-fantasy">{{ fantasyDate }}</div>
+      </header>
+
+      {{ content | safe }}
+    </article>
+      {% include "footer.njk" %}
+    </main>
+  </body>
+</html>
