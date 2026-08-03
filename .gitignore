@@ -145,3 +145,4 @@ vite.config.ts.timestamp-*
 # 11ty
 .11ty/
 public
+_site

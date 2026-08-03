@@ -41,11 +41,13 @@ export default async function(eleventyConfig) {
   });
 
 
+console.log(eleventyConfig)
+
   return {
     markdownTemplateEngine: "njk",
     dir: {
       input: "src",
-      output: "public"
+      output: "_site"
     }
   };
 };
