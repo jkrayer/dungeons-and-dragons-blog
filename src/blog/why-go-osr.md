@@ -4,7 +4,6 @@ description:
 date: 2022-11-06
 author: "Jim"
 tags:
-  - posts
   - d&d
   - 5e
 ---

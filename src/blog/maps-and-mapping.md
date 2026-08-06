@@ -4,7 +4,6 @@ description: Observations about my experiences with mapping, battle-maps and map
 date: 2024-05-14
 author: "Sage Jim"
 tags:
-  - posts
   - retrospective
   - mapping
   - combat

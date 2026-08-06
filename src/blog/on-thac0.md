@@ -4,7 +4,6 @@ description:
 date: 2022-02-10
 author: "Jim"
 tags:
-  - posts
   - combat
 ---
 

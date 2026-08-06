@@ -4,7 +4,6 @@ description:
 date: 2025-07-26
 author: "Jim"
 tags:
-  - posts
   - campaign planning
 ---
 

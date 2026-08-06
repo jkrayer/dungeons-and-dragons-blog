@@ -7,14 +7,27 @@
         <article>
           <header>
             <hgroup>
+              {% if tags | length > 1 %}
               <div>
-                Proposals
+                {% for tag in tags %}
+                  {% if loop.index == 2 %}
+                    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+                      <a href="{{ tagUrl | url }}" class="tag-list-link">{{ tag }}</a>
+                  {% endif %}
+                {% endfor %}
               </div>
-                <h1>{{ title }}</h1>
+              {% endif %}
+              <h1>{{ title }}</h1>
             </hgroup>
-            <time datetime="{{ date }}">
-              <span class="dateline-day">{{ date.toLocaleDateString() }}</span>
-            </time>
+            <div>
+              <span class="byline">by {{ author }}</span>
+              {% if date %}
+                on
+                <time datetime="{{ date }}">
+                  <span class="dateline-day">{{ date.toLocaleDateString() }}</span>
+                </time>
+              {% endif %}
+            </div>
           </header>
 
           {{ content | safe }}
@@ -32,18 +45,18 @@
             {% endif %}
           </footer>
 
+          {% if tags | length > 2 %}
           <aside>
-            <p>Tagged:
+            <p class="tag-list-header">Additional Tags:
               {% for tag in tags %}
-                {% if tag !== 'posts' %}
+                {% if loop.index > 2 %}
                   {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-                  
                     <a href="{{ tagUrl | url }}" class="tag-list-link">{{ tag }}</a>
-                  
                 {% endif %}
               {% endfor %}
             </p>
           </aside>
+          {% endif %}
         </article>
         {% include "footer.njk" %}
     </main>

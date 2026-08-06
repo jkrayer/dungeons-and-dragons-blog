@@ -4,7 +4,6 @@ description:
 date: 2022-02-24
 author: "Jim"
 tags:
-  - posts
   - equipment
 ---
 

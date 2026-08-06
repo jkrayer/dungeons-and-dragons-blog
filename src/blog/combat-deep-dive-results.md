@@ -4,7 +4,6 @@ description:
 date: 2024-12-06
 author: "Sage Jim"
 tags:
-  - posts
   - retrospective
   - combat
 ---

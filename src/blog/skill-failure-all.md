@@ -4,7 +4,6 @@ description:
 date: 2024-12-09
 author: "Sage Jim"
 tags:
-  - posts
   - AD&D
   - 5E
 ---

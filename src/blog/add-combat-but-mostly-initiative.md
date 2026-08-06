@@ -4,7 +4,6 @@ description: Part four in a series explaining AD&D to 5E players. Combat is care
 date: 2023-06-24
 author: "Sage Jim"
 tags:
-  - posts
   - ad&d
   - 5e
 ---

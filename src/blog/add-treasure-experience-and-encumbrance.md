@@ -4,7 +4,6 @@ description: Part three in a series explaining AD&D to 5E players. Treasure in A
 date: 2023-06-16
 author: "Sage Jim"
 tags:
-  - posts
   - ad&d
   - 5e
 ---

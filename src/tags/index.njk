@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: Tags
+description: Browse posts by tag.
+permalink: /tags/
+---
+
+<ul>
+{% for tagPage in collections.tagPages %}
+  {% if tagPage.pageNumber == 0 %}
+  {% set tagUrl %}/tags/{{ tagPage.slug }}/{% endset %}
+  <li><a href="{{ tagUrl | url }}">{{ tagPage.label }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>

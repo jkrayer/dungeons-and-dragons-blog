@@ -4,7 +4,6 @@ description:
 date: 2025-09-07
 author: "Jim"
 tags:
-  - posts
   - proposals
 ---
 

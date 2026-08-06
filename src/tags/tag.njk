@@ -1,0 +1,90 @@
+---
+pagination:
+  data: collections.tagPages
+  size: 1
+  alias: tagPage
+permalink: "{% if tagPage.pageNumber > 0 %}/tags/{{ tagPage.slug }}/page/{{ tagPage.pageNumber + 1 }}/{% else %}/tags/{{ tagPage.slug }}/{% endif %}"
+layout: base.njk
+eleventyComputed:
+  title: Tagged "{{ tagPage.label }}"
+  description: Posts filed under {{ tagPage.label }}.
+---
+
+{% set posts = tagPage.posts or [] %}
+
+{% if posts.length > 0 %}
+{% for post in posts %}
+  <article>
+    <header>
+      <hgroup>
+        {% if post.data.tags | length > 1 %}
+        <div>
+          {% for tag in post.data.tags %}
+            {% if loop.index == 2 %}
+              {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+                <a href="{{ tagUrl | url }}" class="tag-list-link">{{ tag }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      </hgroup>
+
+      <div>
+      <span class="byline">by {{ post.data.author }}</span>
+      {% if post.date %}
+          on
+          <time datetime="{{ post.date }}">
+            <span class="dateline-day">{{ post.data.date.toLocaleDateString() }}</span>
+          </time>
+          {% if post.data.version %}
+            v. {{ post.data.version }}
+          {% endif %}
+      {% endif %}
+      </div>
+    </header>
+
+    <p>{{ post.content | safe | firstParagraph }}</p>
+
+    <footer>
+      <p><a href="{{ post.url }}">Read More ›</a></p>
+
+      {% if post.data.tags | length > 2 %}
+      <p class="tag-list-header">Additional Tags:
+        {% for tag in post.data.tags %}
+          {% if loop.index > 2 %}
+            {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+              <a href="{{ tagUrl | url }}" class="tag-list-link">{{ tag }}</a>
+          {% endif %}
+        {% endfor %}
+      </p>
+      {% endif %}
+
+    </footer>
+  </article>
+{% endfor %}
+
+{% if tagPage.pagination.hrefs and (tagPage.pagination.hrefs | length) > 1 %}
+<nav aria-label="Post pagination">
+  {% if tagPage.pagination.href.previous %}
+    <a href="{{ tagPage.pagination.href.previous }}">Newer posts</a>
+  {% endif %}
+
+  <ol class="pagination-pages">
+    {% for href in tagPage.pagination.hrefs %}
+      <li>
+        <a href="{{ href }}"{% if loop.index0 === tagPage.pagination.pageNumber %} aria-current="page"{% endif %}>
+          {{ loop.index }}
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+
+  {% if tagPage.pagination.href.next %}
+    <a href="{{ tagPage.pagination.href.next }}">Older posts</a>
+  {% endif %}
+</nav>
+{% endif %}
+{% else %}
+<p>No posts were found for this tag.</p>
+{% endif %}

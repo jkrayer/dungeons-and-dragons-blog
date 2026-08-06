@@ -4,7 +4,6 @@ description:
 date: 2022-07-19
 author: "Jim"
 tags:
-  - posts
   - d&d
 footnotes:
 ---

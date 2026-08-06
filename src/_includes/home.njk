@@ -7,42 +7,57 @@
 
     <main id="page-wrapper">
     {% for post in posts %}
-
       <article>
         <header>
           <hgroup>
+            {% if post.data.tags | length > 1 %}
             <div>
-              Tag or Cat
+              {% for tag in post.data.tags %}
+                {% if loop.index == 2 %}
+                  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+                    <a href="{{ tagUrl | url }}" class="tag-list-link">{{ tag }}</a>
+                {% endif %}
+              {% endfor %}
             </div>
+            {% endif %}
           <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
           </hgroup>
-          {# <time datetime="2026-02-07">February 2, 2026</time> #}
+          
+          <div>
+          <span class="byline">by {{ post.data.author }}</span>
           {% if post.date %}
-            <div class="dateline">
+            {# <div class="dateline"> #}
+              on
               <time datetime="{{ post.date }}">
                 <span class="dateline-day">{{ post.data.date.toLocaleDateString() }}</span>
               </time>
               {% if post.data.version %}
                 v. {{ post.data.version }}
               {% endif %}
-            </div>
+            {# </div> #}
           {% endif %}
+          </div>
+          
         </header>
 
         <p>{{ post.content | safe | firstParagraph }}</p>
 
         <footer>
           <p><a href="{{ post.url }}">Read More ›</a></p>
-          {% include "footnotes.njk" %}
-          {# <p class="byline">by {{post.data.author}}</p> #}
-          <p class="tag-list-header">Tagged:
+
+          {# {% include "footnotes.njk" %} #}
+
+          {% if post.data.tags | length > 2 %}
+          <p class="tag-list-header">Additional Tags:
             {% for tag in post.data.tags %}
-              {% if tag !== 'posts' %}
+              {% if loop.index > 2 %}
                 {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
                   <a href="{{ tagUrl | url }}" class="tag-list-link">{{ tag }}</a>
               {% endif %}
             {% endfor %}
           </p>
+          {% endif %}
+
         </footer>
       </article>
       {% else %}

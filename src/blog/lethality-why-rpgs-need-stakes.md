@@ -4,7 +4,6 @@ description:
 date: 2023-01-20
 author: "Jim"
 tags:
-  - posts
   - combat
 ---
 

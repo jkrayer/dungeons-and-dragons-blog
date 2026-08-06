@@ -4,7 +4,7 @@ description:
 date: 2017-03-21
 author: "Jim"
 tags:
-  - posts
+  - running the game
 ---
 
 Whoever said, “don’t split the party,” was a player. Splitting the party is bad news for players because it makes them vulnerable to their enemies. United they are powerful. Divided they are weak. As Dungeon Master you should endeavor to split the party. It is the player’s job to resist.

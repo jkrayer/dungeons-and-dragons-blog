@@ -4,7 +4,7 @@ description:
 date: 2022-01-13
 author: "Jim"
 tags:
-  - posts
+  - characters
 ---
 
 When “Waterdeep: Dragonheist” was released I decided to create a Paladin. Not just any Paladin but an AD&D style lawful-stupid Paladin. There were groans and eye-rolls from my fellow players. “Never fear,” I assured them. My Paladin will have a fatal flaw. He will believe in his heart that everyone can be redeemed. So when the rogue wants to go off and steal a thing my character will just give him a pep-talk about how he could be so much more. Assured that I would not use my character to derail other people’s fun we began play.

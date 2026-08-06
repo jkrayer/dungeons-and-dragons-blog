@@ -4,7 +4,6 @@ description:
 date: 2024-12-17
 author: "Jim"
 tags:
-  - posts
   - osric
 ---
 

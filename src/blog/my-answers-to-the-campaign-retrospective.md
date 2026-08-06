@@ -4,7 +4,6 @@ description: After running games online for the past 4 years it's to to take a s
 date: 2024-11-20
 author: "Sage Jim"
 tags:
-  - posts
   - retrospective
 ---
 

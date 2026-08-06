@@ -4,7 +4,6 @@ description: Part two in a series explaining AD&D to 5E players. A brief look at
 date: 2023-06-15
 author: "Sage Jim"
 tags:
-  - posts
   - ad&d
   - 5e
 ---

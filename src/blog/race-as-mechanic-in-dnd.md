@@ -4,7 +4,6 @@ description: Thinking about the non-human player character races in D&D.
 date: 2024-08-01
 author: "Sage Jim"
 tags:
-  - posts
   - Retrospective
   - Race
 ---
