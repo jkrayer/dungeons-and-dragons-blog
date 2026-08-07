@@ -2,7 +2,7 @@
 title: "My Answers to the Campaign Retrospective"
 description: After running games online for the past 4 years it's to to take a step back and evaluate what I've done so far
 date: 2024-11-20
-author: "Sage Jim"
+author: "Jim"
 tags:
   - retrospective
 ---

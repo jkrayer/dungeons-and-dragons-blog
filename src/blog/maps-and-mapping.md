@@ -2,7 +2,7 @@
 title: "On Mapping and Battle Maps"
 description: Observations about my experiences with mapping, battle-maps and maps revealing in VTTs.
 date: 2024-05-14
-author: "Sage Jim"
+author: "Jim"
 tags:
   - retrospective
   - mapping

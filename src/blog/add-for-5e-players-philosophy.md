@@ -2,7 +2,7 @@
 title: "AD&D for 5E Players: Philosophy"
 description: Part two in a series explaining AD&D to 5E players. A brief look at the different play philosophies of 5E and AD&D
 date: 2023-06-15
-author: "Sage Jim"
+author: "Jim"
 tags:
   - ad&d
   - 5e

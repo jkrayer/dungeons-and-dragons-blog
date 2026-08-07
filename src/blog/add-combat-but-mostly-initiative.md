@@ -2,7 +2,7 @@
 title: "AD&D Combat, but Mostly Initiative"
 description: Part four in a series explaining AD&D to 5E players. Combat is carefully orchestred chaos revolving around a deceptively simple initiative system.
 date: 2023-06-24
-author: "Sage Jim"
+author: "Jim"
 tags:
   - ad&d
   - 5e

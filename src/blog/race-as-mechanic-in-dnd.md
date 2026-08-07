@@ -2,7 +2,7 @@
 title: "Race as a Mechanic in D&D"
 description: Thinking about the non-human player character races in D&D.
 date: 2024-08-01
-author: "Sage Jim"
+author: "Jim"
 tags:
   - Retrospective
   - Race

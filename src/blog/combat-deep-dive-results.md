@@ -2,7 +2,7 @@
 title: "Combat Deep Dive Results"
 description:
 date: 2024-12-06
-author: "Sage Jim"
+author: "Jim"
 tags:
   - retrospective
   - combat

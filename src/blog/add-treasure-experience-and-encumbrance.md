@@ -2,7 +2,7 @@
 title: "AD&D Treasure Experience and Encumbrance"
 description: Part three in a series explaining AD&D to 5E players. Treasure in AD&D has a significance beyond simple loot. In this game the players receive one experience point per gold piece value of recovered treasure."
 date: 2023-06-16
-author: "Sage Jim"
+author: "Jim"
 tags:
   - ad&d
   - 5e

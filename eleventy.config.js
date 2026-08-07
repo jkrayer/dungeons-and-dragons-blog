@@ -1,5 +1,6 @@
 export default async function(eleventyConfig) {
   const TAG_PAGE_SIZE = 5;
+  const isProductionBuild = process.env.ELEVENTY_RUN_MODE === "build";
 
   const hiddenTags = new Set([
     "all",
@@ -49,6 +50,24 @@ export default async function(eleventyConfig) {
 
   eleventyConfig.addFilter("filterTagList", (tags) => {
     return filterTagList(tags);
+  });
+
+  // Exclude draft content from production builds while keeping it visible in dev.
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    permalink: (data) => {
+      if (isProductionBuild && data?.draft) {
+        return false;
+      }
+
+      return data?.permalink;
+    },
+    eleventyExcludeFromCollections: (data) => {
+      if (isProductionBuild && data?.draft) {
+        return true;
+      }
+
+      return data?.eleventyExcludeFromCollections;
+    }
   });
   
 // COLLECTIONS

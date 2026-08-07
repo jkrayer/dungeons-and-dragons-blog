@@ -2,7 +2,7 @@
 title: "Campaign Retrospective Results"
 description: Discussing the results of the "Campaign Retrospective" survey.
 date: 2024-11-24
-author: "Sage Jim"
+author: "Jim"
 tags:
   - retrospective
 ---

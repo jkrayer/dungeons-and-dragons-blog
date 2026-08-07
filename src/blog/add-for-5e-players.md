@@ -2,7 +2,7 @@
 title: "AD&D for 5E Players: What Drove Me Away"
 description: Part one in a series explaining AD&D to 5E players. Here I explore some topics that drove me away from modern D&D in self-indulgent detail.
 date: 2023-05-20
-author: "Sage Jim"
+author: "Jim"
 tags:
   - ad&d
   - 5e

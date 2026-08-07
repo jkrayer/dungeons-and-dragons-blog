@@ -65,24 +65,28 @@ eleventyComputed:
 {% endfor %}
 
 {% if tagPage.pagination.hrefs and (tagPage.pagination.hrefs | length) > 1 %}
-<nav aria-label="Post pagination">
-  {% if tagPage.pagination.href.previous %}
-    <a href="{{ tagPage.pagination.href.previous }}">Newer posts</a>
-  {% endif %}
+<nav class="pagination" aria-label="Post pagination">
+  <menu class="button-row">
+    <li>
+    {% if tagPage.pagination.href.previous %}
+      <a class="button outline" href="{{ tagPage.pagination.href.previous }}">Newer posts</a>
+    {% endif %}
+    </li>
 
-  <ol class="pagination-pages">
     {% for href in tagPage.pagination.hrefs %}
-      <li>
-        <a href="{{ href }}"{% if loop.index0 === tagPage.pagination.pageNumber %} aria-current="page"{% endif %}>
-          {{ loop.index }}
-        </a>
-      </li>
+    <li>
+      <a class="button outline" href="{{ href }}"{% if loop.index0 === tagPage.pagination.pageNumber %} aria-current="page"{% endif %}>
+        {{ loop.index }}
+      </a>
+    </li>
     {% endfor %}
-  </ol>
 
-  {% if tagPage.pagination.href.next %}
-    <a href="{{ tagPage.pagination.href.next }}">Older posts</a>
-  {% endif %}
+    <li>
+    {% if tagPage.pagination.href.next %}
+      <a class="button outline" href="{{ tagPage.pagination.href.next }}">Older posts</a>
+    {% endif %}
+    </li>
+  </menu>
 </nav>
 {% endif %}
 {% else %}

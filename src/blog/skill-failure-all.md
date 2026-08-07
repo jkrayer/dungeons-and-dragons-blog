@@ -2,7 +2,7 @@
 title: "Skill failure all"
 description:
 date: 2024-12-09
-author: "Sage Jim"
+author: "Jim"
 tags:
   - AD&D
   - 5E

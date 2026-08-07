@@ -63,25 +63,30 @@
       {% else %}
     {% endfor %}
 
-    <nav aria-label="Post pagination">
-      {% if pagination.href.previous %}
-        <a href="{{ pagination.href.previous }}">Newer posts</a>
-      {% endif %}
-
-      <ol class="pagination-pages">
-        {% for href in pagination.hrefs %}
+      <nav class="pagination" aria-label="Post pagination">
+        <menu class="button-row">
           <li>
-            <a href="{{ href }}"{% if loop.index0 === pagination.pageNumber %} aria-current="page"{% endif %}>
+          {% if pagination.href.previous %}
+            <a class="button outline" href="{{ pagination.href.previous }}">Newer posts</a>
+          {% endif %}
+          </li>
+        
+          {% for href in pagination.hrefs %}
+          <li>
+            <a class="button outline" href="{{ href }}"{% if loop.index0 === pagination.pageNumber %} aria-current="page"{% endif %}>
               {{ loop.index }}
             </a>
           </li>
-        {% endfor %}
-      </ol>
-
-      {% if pagination.href.next %}
-        <a href="{{ pagination.href.next }}">Older posts</a>
-      {% endif %}
-    </nav>
+          {% endfor %}
+        
+          <li>
+          {% if pagination.href.next %}
+            <a class="button outline" href="{{ pagination.href.next }}">Older posts</a>
+          {% endif %}
+          </li>
+        </menu>
+      </nav>
+    
     </main>
 
     {% include "footer.njk" %}
@@ -89,3 +94,6 @@
     <script src="/script/main.js"></script>
   </body>
 </html>
+
+
+
