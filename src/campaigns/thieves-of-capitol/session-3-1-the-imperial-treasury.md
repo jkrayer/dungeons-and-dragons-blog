@@ -13,12 +13,6 @@ permalink: /campaigns/thieves-of-capitol/session-1-the-imperial-treasury/
 pre: Session
 ---
 
-Session
-
-### Session 1: The Imperial Treasury
-
-Month 7, Day 15, Year 757
-
 The Baker's Dozen answers the call to investigate the sink-hole that swallowed the Imperial Treasury. Finding Angus Kobblestone and his gnomish rebels responsible for sapping the treasury in order to recover gnomish tribute and finding that tribute mysteriously missing from the treasury they decide to collude with the gnomes and cast the blame for the sapping on kobolds.
 
 During their own investigation, the Baker's Dozen discovers strange platinum ingots and golden spikes struck with an unknown cloud shaped sigil.

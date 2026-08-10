@@ -13,12 +13,6 @@ permalink: /campaigns/thieves-of-capitol/session-2-thunder-lighting-and-flash/
 pre: Session
 ---
 
-Session
-
-### Session 2: Thunder, Lighting and Flash
-
-Month 7, Day 19, Year 757
-
 The Baker's Dozen steal "Pestle" from Thunder, Lighting and Flash. In return for its recovery the priests of Trim entreat their god to lift his curse on their stolen items. Trim taunts the brothers casting their suspicion far from human thieves.
 
 ### The Contract (The Baker's Dozen)
