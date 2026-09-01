@@ -1,3 +1,7 @@
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItTocDoneRight from "markdown-it-toc-done-right";
+
 export default async function(eleventyConfig) {
   const TAG_PAGE_SIZE = 5;
   const isProductionBuild = process.env.ELEVENTY_RUN_MODE === "build";
@@ -167,6 +171,22 @@ export default async function(eleventyConfig) {
     // return list;
     return `<sup><a href="#footnote-${number}">${number}</a></sup>`;
   });
+
+  const markdownLibrary = markdownIt({
+    html: true,
+    linkify: true,
+    typographer: true
+  })
+    .use(markdownItAnchor, {
+      level: [1, 2, 3, 4, 5, 6]
+    })
+    .use(markdownItTocDoneRight, {
+      level: [2, 3, 4, 5, 6],
+      listType: "ol"
+    });
+
+  eleventyConfig.setLibrary("md", markdownLibrary);
+
   return {
     markdownTemplateEngine: "njk",
     dir: {
