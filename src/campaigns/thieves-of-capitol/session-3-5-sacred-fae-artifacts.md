@@ -1,19 +1,19 @@
 ---
-title: "Session 3-4: The Art Heist"
+title: "Session 3-5: Sacred Fae Artifacts"
 description:
-date: 2026-08-09
-fantasyDate: Month 7, Day 39, Year 757
+date: 2026-08-16
+fantasyDate: Month 8, Day 9, Year 757
 author: Jim
 layout: campaign.njk
 tags:
   - campaign-entry
   - campaign-thieves-of-capitol
   - campaign
-permalink: campaigns/thieves-of-capitol/session-3-4-the-art-heist/
+permalink: campaigns/thieves-of-capitol/session-3-5-sacred-fae-artifacts/
 pre: Session
 ---
 
-The Baker's Dozen punish newly minted porters for undercutting the guild.
+The Baker's Dozen races to locate the three sacred artifacts before Thefri's claw can burrow into B.F.'s chest.
 
 ## Jobs
 

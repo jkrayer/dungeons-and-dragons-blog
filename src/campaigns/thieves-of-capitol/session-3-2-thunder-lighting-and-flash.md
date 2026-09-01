@@ -9,7 +9,7 @@ tags:
   - campaign-entry
   - campaign-thieves-of-capitol
   - campaign
-permalink: /campaigns/thieves-of-capitol/session-2-thunder-lighting-and-flash/
+permalink: /campaigns/thieves-of-capitol/session-3-2-thunder-lighting-and-flash/
 pre: Session
 ---
 

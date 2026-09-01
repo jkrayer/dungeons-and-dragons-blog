@@ -9,7 +9,7 @@ tags:
   - campaign-entry
   - campaign-thieves-of-capitol
   - campaign
-permalink: campaigns/thieves-of-capitol/session-3-the-temple-of-dawn/
+permalink: campaigns/thieves-of-capitol/session-3-3-the-temple-of-dawn/
 pre: Session
 ---
 
