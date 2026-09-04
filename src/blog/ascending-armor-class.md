@@ -1,6 +1,5 @@
 ---
 title: "Ascending Armor Class"
-draft: true
 description:
 date: 2026-09-04
 author: "Jim"
