@@ -48,6 +48,20 @@ export default async function(eleventyConfig) {
     return paragraphs[0] || "";
   });
 
+  // Preview excerpts can include footnote shortcodes; redirect those anchors to the full post URL.
+  eleventyConfig.addFilter("previewParagraph", (content, postUrl = "") => {
+    const paragraphs = String(content || "").split(/<\/?p>/).filter((p) => p.trim() !== "");
+    const first = paragraphs[0] || "";
+
+    if (!postUrl) {
+      return first;
+    }
+
+    return first.replace(/href=(["'])#footnote-(\d+)\1/g, (_match, quote, number) => {
+      return `href=${quote}${postUrl}#footnote-${number}${quote}`;
+    });
+  });
+
   eleventyConfig.addFilter("filterTagList", (tags) => {
     return filterTagList(tags);
   });
