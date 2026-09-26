@@ -40,7 +40,7 @@
           
         </header>
 
-        <p>{{ post.content | safe | firstParagraph }}</p>
+        <p>{{ post.content | previewParagraph(post.url) | safe }}</p>
 
         <footer>
           <p><a href="{{ post.url }}">Read More ›</a></p>

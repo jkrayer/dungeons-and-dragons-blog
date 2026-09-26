@@ -9,7 +9,7 @@ tags:
   - campaign-entry
   - campaign-thieves-of-capitol
   - campaign
-permalink: campaigns/thieves-of-capitol/session-4-the-art-heist/
+permalink: campaigns/thieves-of-capitol/session-3-4-the-art-heist/
 pre: Session
 ---
 
