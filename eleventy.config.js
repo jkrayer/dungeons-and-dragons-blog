@@ -46,6 +46,44 @@ export default async function(eleventyConfig) {
       .replace(/^-+|-+$/g, "");
   }
 
+  function getCampaignSlug(inputPath = "") {
+    const normalizedPath = String(inputPath).replace(/\\/g, "/");
+    const campaignPathMatch = normalizedPath.match(/\/campaigns\/([^/]+)\//);
+
+    return campaignPathMatch ? campaignPathMatch[1] : null;
+  }
+
+  function getTimestamp(item) {
+    const dateValue = item?.date ?? item?.data?.date;
+    const parsedDate = dateValue instanceof Date ? dateValue : new Date(dateValue ?? 0);
+    const timestamp = parsedDate.getTime();
+
+    return Number.isNaN(timestamp) ? 0 : timestamp;
+  }
+
+  function getLatestEntryTimestampForCampaign(campaignEntries, campaignHomeItem) {
+    const campaignSlug = getCampaignSlug(campaignHomeItem?.inputPath);
+
+    if (!campaignSlug) {
+      return 0;
+    }
+
+    const timestamps = campaignEntries
+      .filter((entry) => getCampaignSlug(entry?.inputPath) === campaignSlug)
+      .map((entry) => getTimestamp(entry));
+
+    if (timestamps.length === 0) {
+      return 0;
+    }
+
+    return Math.max(...timestamps);
+  }
+
+  function isCampaignOngoing(campaignHomeItem) {
+    const status = String(campaignHomeItem?.data?.campaignStatus || "ongoing").toLowerCase();
+    return status !== "concluded";
+  }
+
   // FILTERS
   eleventyConfig.addFilter("firstParagraph", (content) => {
     const paragraphs = content.split(/<\/?p>/).filter(p => p.trim() !== "");
@@ -70,6 +108,18 @@ export default async function(eleventyConfig) {
     return filterTagList(tags);
   });
 
+  eleventyConfig.addFilter("entriesForCampaign", (entries, page) => {
+    const campaignSlug = getCampaignSlug(page?.inputPath);
+
+    if (!campaignSlug) {
+      return [];
+    }
+
+    return [...entries]
+      .filter((entry) => getCampaignSlug(entry?.inputPath) === campaignSlug)
+      .sort((a, b) => getTimestamp(b) - getTimestamp(a));
+  });
+
   // Exclude draft content from production builds while keeping it visible in dev.
   eleventyConfig.addGlobalData("eleventyComputed", {
     permalink: (data) => {
@@ -90,8 +140,27 @@ export default async function(eleventyConfig) {
   
 // COLLECTIONS
   eleventyConfig.addCollection("campaigns", function(collectionApi) {
+    const campaignEntries = collectionApi.getFilteredByTag("campaign-entry");
+
     return collectionApi
       .getFilteredByTag("campaign-home")
+      .sort((a, b) => {
+        const ongoingA = isCampaignOngoing(a);
+        const ongoingB = isCampaignOngoing(b);
+
+        if (ongoingA !== ongoingB) {
+          return ongoingB - ongoingA;
+        }
+
+        const latestA = getLatestEntryTimestampForCampaign(campaignEntries, a);
+        const latestB = getLatestEntryTimestampForCampaign(campaignEntries, b);
+
+        if (latestA !== latestB) {
+          return latestB - latestA;
+        }
+
+        return getTimestamp(b) - getTimestamp(a);
+      });
   });
 
   eleventyConfig.addCollection("campaignEntries", function(collectionApi) {

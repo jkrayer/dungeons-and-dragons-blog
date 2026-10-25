@@ -6,6 +6,7 @@ tags:
   - campaign-home
   - campaign
 campaignTag: campaign-thieves-of-capitol
+campaignStatus: concluded
 permalink: /campaigns/thieves-of-capitol/
 ---
 
@@ -21,7 +22,7 @@ An amount of years before the war with the Elves, during the reign of Emperor Le
 
 ## Sessions and Events
 
-{% set entries = collections.campaignEntries | reverse %}
+{% set entries = collections.campaignEntries | entriesForCampaign(page) %}
 
 {% if entries and entries.length > 0 %}
 
