@@ -1,7 +1,7 @@
 ---
 title: "Session 1: Stolen Treasure Map"
 description:
-date: 2026-05-09
+date: 2026-10-11
 fantasyDate: The first seal has not yet opened
 author: Jim
 layout: campaign.njk
