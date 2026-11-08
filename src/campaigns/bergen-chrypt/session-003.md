@@ -13,4 +13,6 @@ permalink: /campaigns/bergen-chrypt/session-003-kartusch/
 pre: Session
 ---
 
-Click by clack the adventurers are lowered into the earth 
+Click by clack the adventurers are lowered into the earth&hellip;
+
+In the pit-city Kartusch the adventurers meet Balsa the Wise who sends them, as she once sent Fuller, to the shattered city of Spinel. Finding nothing but Fuller's journal they return to Kartusch.
