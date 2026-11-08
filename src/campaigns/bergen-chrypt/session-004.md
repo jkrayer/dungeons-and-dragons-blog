@@ -13,5 +13,5 @@ permalink: /campaigns/bergen-chrypt/session-004-return-to-kartusch/
 pre: Session
 ---
 
-Above the din of golem wound gears the buzz of bloated flies and stinging wasps vibrates air sickened by the stench of slaughter.
+Above the din of golem wound gears the buzz of bloated flies and stinging wasps vibrates the air. You dodge and duck the swarm to enter the elevator.
 
