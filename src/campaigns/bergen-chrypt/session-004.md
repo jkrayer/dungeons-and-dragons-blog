@@ -15,3 +15,5 @@ pre: Session
 
 Above the din of golem wound gears the buzz of bloated flies and stinging wasps vibrates the air. You dodge and duck the swarm to enter the elevator.
 
+Balsa the Wise advises the adventurers to search out the Corpse Cult in the lands to the south.
+
